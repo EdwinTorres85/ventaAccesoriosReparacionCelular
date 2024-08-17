@@ -1,0 +1,1031 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.form-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.price {
+    font-weight: bold;
+    color: #28a745;
+}
+
+:root {
+	--byteBlue: rgb(50, 115, 168);
+	--byteBlueL: rgb(181, 241, 249);
+	--byteBlueD: rgb(0, 80, 117);
+	--byteFont: 'Sriracha', cursive;
+}
+
+* {
+	font-family: var(--byteFont);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--byteBlueL);	
+	margin: 0;
+}
+
+body footer {
+	background-color: rgb(36, 39, 41);
+	color: var(--byteBlueL);
+	border-top: 1em solid var(--byteBlueD);
+}
+
+body footer p {
+	padding: 2em 1em;
+	margin: 0;
+	font-size: 1.2em;
+}
+
+/* ----------------------- */
+/* -------- Header --------*/
+/* ----------------------- */
+
+header {
+	background-color: var(--byteBlue);
+	background-image: linear-gradient(var(--byteBlueL), var(--byteBlueD), var(--byteBlue));
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 0.5em;
+	border-bottom: 10px solid var(--byteBlueD);
+}
+
+header a img {
+	width: 20vw;
+}
+
+header h1 {	
+	text-align: center;
+	text-decoration: none;
+	font-size: 30px;
+	color: var(--byteBlueL);
+}
+
+.contactInfoHeader {
+	text-align: right;
+}
+
+.contactInfoHeader a {
+	text-decoration: none;
+	color: var(--byteBlueL);
+}
+
+/* ----------------------------------- */
+/* -------- nav: menú + login -------- */
+/* ----------------------------------- */
+
+.navContainer {
+	display: flex;
+	position: static;
+}
+
+.navContainer .navBar {
+	display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navContainer .navBar li, .navContainer .navBar>ul {
+	list-style-type: none;
+}
+
+.navContainer .navBar li a {
+	display: inline-block;
+	border-radius: 0.2em;
+	background-color: var(--byteBlue);
+	color: var(--byteBlueL);
+	text-align: center;
+	font-size: 20px;
+	padding: 10px;
+	width: 15vw;
+	transition: all .2s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.navContainer .navBar li a span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: .2s;	
+}
+
+.navContainer .navBar li a span::after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: .2s;
+}
+
+.navContainer .navBar li a:hover span {
+  	padding-right: 25px;
+}
+
+.navContainer .navBar li a:hover span::after {
+	opacity: 1;
+	right: 0;
+}
+
+.navContainer .navBar li a:hover {
+	background-color: var(--byteBlueD);
+}
+
+.navContainer .navLogin {
+	padding: 2px;
+	margin-top: 0.1em;
+	position: absolute;
+	right: 0.5em;
+	text-align: center;
+	border: 1px solid var(--byteBlueD);
+	border-radius: 5px;
+}
+
+.navContainer .navLogin input[type="submit"] {
+	background-color: var(--byteBlue);
+	color: var(--byteBlueL);
+	border: 2px solid var(--byteBlueD);
+	padding: 2px 10px;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.navContainer .navLogin input[type="submit"]:hover {
+	background-color: var(--byteBlueD);
+}
+
+.navContainer .navLogin a {
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.navContainer .navLogin a span {
+	margin: 0;
+}
+
+/* ------------------------- */
+/* -------- miniNav -------- */
+/* ------------------------- */
+
+.navContainerMini {
+	display: flex;
+	justify-content: center;
+	position: sticky;
+	top: 0;
+	background-color: var(--byteBlue);
+	z-index: 100;
+	padding: .5em 0;
+	border-bottom: 4px solid var(--byteBlueD);
+}
+
+.navContainerMini .navBar {
+	display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navContainerMini .navBar li, .navContainerMini .navBar>ul {
+	list-style-type: none;
+
+}
+
+.navContainerMini .navBar li a {
+	display: inline-block;
+	border-radius: 0.2em;
+	background-color: var(--byteBlueL);
+	color: var(--byteBlueD);
+	text-align: center;
+	font-size: 15px;
+	padding: 5px 30px;
+	width: 7vw;
+	transition: all .2s;
+	cursor: pointer;
+	margin: 3px;
+}
+
+.navContainerMini .navBar li a span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0;	
+}
+
+.navContainerMini .navBar li a span::after {
+	content: '';
+	position: static;
+	opacity: 1;
+	top: 0;
+	right: 0;
+	transition: 0;
+}
+
+.navContainerMini .navBar li a:hover span {
+  	padding-right: 0;
+}
+
+.navContainerMini .navBar li a:hover span::after {
+	opacity: 1;
+	right: 0;
+}
+
+.navContainerMini .navBar li a:hover {
+	background-color: var(--byteBlueD);
+	color: var(--byteBlueL);
+}
+
+.navContainerMini .navLogin {
+	display: none;
+}
+
+/* ---------------------------------- */
+/* ---- Sección/Slider de ventas ---- */
+/* ---------------------------------- */
+
+.ventasSection {
+	margin-bottom: 12vw;
+	text-align: center;
+}
+
+.ventasSection h2, .reparSection h2, .contactoSection h2 {
+	font-size: 2.2em;
+}
+
+.sliderContainer {
+	position: relative;
+}
+
+.mySlideImg {
+	cursor: pointer;
+}
+
+.mySlideLeft, .mySlideRight {
+	position: absolute;
+	width: 10%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.mySlideLeft {
+	left: 5em;
+}
+
+.mySlideRight {
+	right: 5em;
+}
+
+.mySlide {
+	width: 50%;
+	max-width: 600px;
+	max-height: 450px;
+	text-align: center;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 1em 0;
+}
+
+.sliderContainer figure img {
+	width: 100%;
+	height: auto;
+	min-width: 10vw;
+	min-height: 10vw;
+	max-width: 40vw;
+	max-height: 40vw;
+	border-radius: .5em;
+	border: 3px solid var(--byteBlueD);
+
+}
+
+.sliderContainer figure[style="display: block"] img {
+	max-width: 40vw;
+	max-height: 40vw;
+	cursor: pointer;	
+}
+
+.slideDesc {
+	width: 100%;
+	height: auto;
+	max-width: 80%;
+	max-height: 5%;
+	overflow: hidden;
+	color: var(--byteBlueL);
+	background-color: rgba(50, 115, 168, .8);
+	position: absolute;
+	top: 0;
+	padding: .5em;
+	font-size: 1em;
+	transition: .2s;
+	transform: translateX(10%);
+	border-radius: 2em;
+	/*transform: translate(0%,-50%);*/
+}
+
+.slideDesc:hover {
+	border: 2px solid var(--byteBlueD);
+	border-radius: 0;
+	max-height: 30%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: rgba(50, 115, 168, 1);
+	transition: .2s;
+	border-top-left-radius: .5em;
+	/*max-width: 100%;
+	transform: translateX(0);*/
+}
+
+.divIdImg {
+	display: none;
+}
+
+#contacto-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+#titulo-contacto {
+    text-align: center;
+}
+
+.grupo-formulario {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#boton-enviar {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#boton-enviar:hover {
+    background-color: #218838;
+}
+
+.botonSliderIzq{
+    left: 0%;
+}
+
+.botonSliderDer{
+    right: 0%;
+}
+
+.botonSliderIzq, .botonSliderDer {
+	border: none;
+	color: var(--byteBlueD);
+	background-color: var(--byteBlue);
+	font-size: 2em;
+	padding: .5em;
+	transition: .2s;
+	cursor: pointer;
+	position: absolute;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+
+.botonSliderIzq:hover, .botonSliderDer:hover {
+	background-color: var(--byteBlueD);
+	color: var(--byteBlueL);
+	padding: .8em;
+}
+
+.addToCart {
+	float: right;
+	margin-right: 15vw;
+	color: var(--byteBlueL);
+	background-color: rgb(31, 166, 45);
+	border: 2px solid var(--byteBlueD);
+	border-radius: .8em;
+	padding: 1em 2em;
+	transition: .2s;
+}
+
+.addToCart:hover {
+	cursor: pointer;
+	padding: 1.4em 2.4em;
+	transition: .2s;
+	font-weight: bold;
+	background-color: rgb(12, 102, 22);
+}
+
+.addToCart::before {
+	font-family: FontAwesome;
+	content: "\f07a";
+	display: block;
+	font-size: 3em;
+}
+
+/* Oculto hasta que tenga funcionalidad */
+.ventasSection .sliderContainer form {
+	display: none;
+}
+
+.tooltiptextSlider {
+	visibility: hidden;
+	width: 120px;
+	background-color: var(--byteBlue);
+	color: var(--byteBlueL);
+	text-align: center;
+	border: solid 2px var(--byteBlueD);
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 10;
+	top: 100%;
+	left: 50%;
+	margin-left: -60px;
+	opacity: 0;
+	transition: opacity .2s;
+}
+
+.tooltiptextSlider::after {
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent var(--byteBlueD) transparent;
+}
+
+.mySlide:hover .tooltiptextSlider {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* ------------------------------ */
+/* ---- Sección reparaciones ---- */
+/* ------------------------------ */
+
+.reparSection {
+	position: relative;
+	border-top: .5em dotted var(--byteBlueD);
+	padding: 1em;
+	margin-bottom: 5vw;
+	text-align: center;
+}
+
+.reparSection::after {
+	content: "";
+	background-image: url(images/repairBG.png);
+	opacity: 0.3;
+	background-repeat: no-repeat;
+	top: 0;
+	left: 50%;
+	bottom: 0;
+	right: 0;
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: -50;
+	margin-top: 1em;
+}
+
+.reparSection p {
+	font-size: 1.7em;
+}
+
+.reparSection button {
+	background-color: var(--byteBlue);
+	border: 2px solid var(--byteBlueD);
+	border-radius: 10px;
+	color: var(--byteBlueL);
+	margin: 0;
+	padding: 1em;
+	font-size: 2em;
+	cursor: pointer;
+	box-shadow: 0 9px #999;
+	opacity: 0.8;
+}
+
+.reparSection button:hover {
+	opacity: 1;
+}
+
+.reparSection button:active {
+	background-color: var(--byteBlueD);
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+.formDiag {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+}
+
+.repModelo, .repProblema {
+	width: 40vw;
+	font-size: 1.1em;
+	margin-bottom: 1em;
+	border: 2px solid var(--byteBlueD);
+}
+
+.repSendButton, .repClearButton {
+	width: 20vw;
+	font-size: 1.3em;
+	background-color: var(--byteBlue);
+	color: var(--byteBlueL);
+	cursor: pointer;
+	border: 2px solid var(--byteBlueD);
+	border-radius: .4em;
+	padding: .5em 1em;
+}
+
+.repSendButton {
+	margin-bottom: 1em;
+}
+
+.repSendButton:hover {
+	background-color: var(--byteBlueD);
+}
+
+.repClearButton:hover {
+	background-color: rgb(207, 0, 0);
+}
+
+/* ----------------------------- */
+/* ---- Sección de contacto ---- */
+/* ----------------------------- */
+
+.contactoSection {
+	position: relative;
+	border-top: .5em dotted var(--byteBlueD);
+	padding: 1em;
+	margin-bottom: 5vw;
+	text-align: center;
+}
+
+.contactoSection::after {
+	content: "";
+	background-image: url(images/localBG.png);
+	opacity: 0.3;
+	background-repeat: no-repeat;
+	top: 0;
+	left: 50%;
+	bottom: 0;
+	right: 0;
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: -50;
+	margin-top: 1em;
+}
+
+.contactoSection p {
+	font-size: 1.7em;
+}
+
+/* ------------------------ */
+/* ---- goToTop button ---- */
+/* ------------------------ */
+
+.goToTop {
+    display: none;
+    position: fixed;
+    bottom: 1em;
+    right: 2em;
+    z-index: 150;
+    border-width: 3px;
+    border-color: #f2f2f2;
+    border-style: outset;
+    box-shadow: 2px 2px 7px rgba(0,0,0,.6);
+    border-radius: 50%;
+    outline: none;
+    background-color: var(--byteBlue);
+    color: var(--byteBlueL);
+    cursor: pointer;
+    padding: .3em .5em;
+    font-size: 1.2em;
+}
+
+.goToTop::before {
+	font-family: FontAwesome;
+	content: "\f062";
+	display: block;
+	font-size: 1.5em;
+}
+
+.goToTop:hover {
+	background-color: var(--byteBlueD);  	
+	transform-origin: 50% 50%;
+  	animation: jumpAnimation .5s;
+}
+
+/* -------------------- */
+/* ---- animations ---- */
+/* -------------------- */
+
+@keyframes jumpAnimation {
+  	0%   {transform: translateY(0%);}
+  	25%  {transform: translateY(-20%);}
+	50%  {transform: translateY(10%);}
+	75%  {transform: translateY(-20%);}
+  	100% {transform: translateY(0%);}
+}
+
+
+
+/* --------------------- */
+/* ---- mediaQuerys ---- */
+/* --------------------- */
+
+@media only screen and (max-width: 1600px) {
+	.ventasSection {
+		margin-bottom: 20vw;
+	}
+
+	.tooltiptextSlider {
+		top: 125%;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	.tooltiptextSlider {
+		top: 105%;
+	}
+}
+
+
+@media only screen and (max-width: 900px) {
+	.navContainer {
+		display: flex;
+		justify-content: space-between;
+		top: 0;
+		padding: .5em 0;
+	}
+
+	.navContainer .navBar li a {
+		font-size: 16px;
+		padding: 10px 25px; 
+		width: 12vw;
+		margin: 3px;
+	}
+
+	.navContainer .navBar li a span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0;	
+	}
+
+	.navContainer .navBar li a span::after {
+		content: '';
+		position: static;
+		opacity: 1;
+		top: 0;
+		right: 0;
+		transition: 0;
+	}
+
+	.navContainer .navBar li a:hover span {
+	  	padding-right: 0;
+	}
+
+	.navContainer .navBar li a:hover span::after {
+		opacity: 1;
+		right: 0;
+	}
+
+	.navContainer .navBar li a:hover {
+		background-color: var(--byteBlueD);
+		color: var(--byteBlueL);
+	}
+
+
+	.navContainer .navLogin {
+		padding: 2px;
+		margin-top: 0.1em;
+		position: absolute;
+		right: 0.5em;
+		text-align: center;
+	}
+
+	.navContainer .navLogin input[type="text"],  .navContainer .navLogin input[type="password"]{
+		width: 15vw;
+	}
+
+	.navContainer .navLogin a {
+		text-decoration: none;
+		font-size: 1;
+	}
+
+	.navContainerMini .navBar li a {
+		font-size: 16px;
+		padding: 10px 25px; 
+		width: 12vw;
+		margin: 3px;
+	}
+
+	.addToCart {
+		margin-right: 10vw;
+		padding: .5em 1em;
+	}
+
+	.addToCart:hover {
+		padding: .7em 1.2em;
+	}
+
+	.reparSection p {
+		font-size: 1.2em;
+	}
+
+	.reparSection button {
+		padding: .5em;
+		font-size: 1.2em;
+	}
+
+	.contactoSection p {
+		font-size: 1.2em;
+	}
+
+	footer {
+		padding-bottom: 6em;
+	}
+
+	body footer p {
+		font-size: 1em;
+	}
+}
+
+
+@media only screen and (max-width: 750px) {
+	.contactInfoHeader {
+		display: none;
+	}
+
+	header h1 {
+		padding-right: 10vw;
+	}
+	
+	.navContainer .navBar li a {
+		font-size: 14px;
+		padding: 10px 15px; 
+		width: 12vw;
+		margin: 3px;
+	}
+
+	.repModelo, .repProblema {
+		font-size: 1em;
+	}
+
+	.repSendButton, .repClearButton {
+		width: 30vw;
+		font-size: 1em;
+		padding: .2em .7em;
+	}
+
+	.slideDesc {
+		font-size: .8em;
+	}
+
+	.mySlideLeft {
+		left: 2em;
+	}
+
+	.mySlideRight {
+		right: 2em;
+	}
+
+	.tooltiptextSlider {
+		font-size: .8em;
+	}
+
+	.addToCart {
+		transform: translateY(-50%);
+		border-radius: .4em;
+	}
+}
+
+@media only screen and (max-width: 560px) {
+	header a img {
+		width: 40vw;
+	}
+
+	header h1 {
+		padding-right: 0;
+		font-size: 1.5em;
+	}
+
+	.ventasSection h2, .reparSection h2, .contactoSection h2 {
+		font-size: 1.8em;
+	}
+
+	.navContainer .navBar {
+		display: inline-block;
+	}
+
+	.navContainer .navBar li a {
+		width: 25vw;
+		padding: 5px 10px;
+	}
+
+	.navContainer .navLogin {
+		width: 60vw;
+	}
+
+	.navContainerMini .navBar li a {
+		font-size: 10px;
+	}
+
+	.navContainer .navLogin input[type="text"],  .navContainer .navLogin input[type="password"]{
+		width: 20vw;
+	}
+
+	.mySlide {
+		width: 100vw;
+		margin-top: ;
+	}
+
+	.sliderContainer figure img {
+		min-width: 10vw;
+		min-height: 10vw;
+		max-width: 75vw;
+		max-height: 75vw;
+	}
+
+	.mySlideLeft, .mySlideRight {
+		display: none;
+	}
+
+	.botonSliderIzq, .botonSliderDer {
+		font-size: 1.5em;
+		padding: .3em;
+	}
+
+	.botonSliderIzq:hover, .botonSliderDer:hover {
+		padding: .5em;
+	}
+
+	.addToCart {
+		padding: .2em .6em;
+		margin: 1em 0;
+		float: none;
+		transform: translateX();
+	}
+
+	.addToCart:hover {
+		padding: .4em .8em;
+	}
+
+	.mySlide:hover .tooltiptextSlider {
+		visibility: hidden;
+	}
+
+	.repSendButton, .repClearButton {
+		width: 30vw;
+		font-size: 1em;
+		padding: .2em .7em;
+	}
+
+	footer {
+		padding-bottom: 3em;
+	}
+
+}
+
+#footer-servicios {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#contenido-footer {
+    max-width: 800px;
+    margin: auto;
+}
+
+#titulo-footer {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#descripcion-footer {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#servicios-footer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.servicio-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    width: 45%;
+}
+
+#contacto-footer {
+    font-size: 14px;
+}
+
+#contacto-footer p {
+    margin: 5px 0;
+}
